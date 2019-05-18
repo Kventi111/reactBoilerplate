@@ -1,4 +1,5 @@
 import MainPage from '../containers/mainPage'
+import Questionary from '../containers/questionnaire'
 
 export const openRoute = [
   {
@@ -6,7 +7,12 @@ export const openRoute = [
     path: '/',
     title: 'Главная',
     component: MainPage,
-    service: null,
+  },
+  {
+    exact: true,
+    path: '/questionary',
+    title: 'Опросник',
+    component: Questionary,
   },
   {
     path: '*',

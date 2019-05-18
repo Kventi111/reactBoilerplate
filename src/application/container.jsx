@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Questionary from '../containers/questionnaire'
 
 export default class Application extends Component {
   render() {
@@ -7,6 +8,7 @@ export default class Application extends Component {
     return (
       <div>
         application
+        <Questionary />
       </div>
     )
   }
