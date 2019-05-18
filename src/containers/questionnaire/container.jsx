@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react'
+import QuestionList from './conponents/questionList'
 
-const Questionary = props => {
-  console.log("questionary props",props);
-  
-  return (
-    <div>
-      Hello from questionary
-    </div>
-  );
-};
-
-export default Questionary;
+export default class Questionary extends Component {
+  componentDidMount() {
+    this.props.mount()    
+  }
+  render() {
+    const {
+      questionary : {loader,list}
+    } = this.props
+    return (
+      <div>
+        {loader ? 'Загрузка...' : <QuestionList list={list} />}
+      </div>
+    )
+  }
+}
