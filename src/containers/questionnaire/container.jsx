@@ -11,6 +11,7 @@ export default class Questionary extends Component {
     } = this.props
     return (
       <div>
+        <h1>Самый крутой опросник :)</h1>
         {loader ? 'Загрузка...' : <QuestionList list={list} />}
       </div>
     )

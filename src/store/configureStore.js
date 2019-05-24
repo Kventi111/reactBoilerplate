@@ -12,7 +12,6 @@ const logger = createLogger({
   level: 'log',
   collapsed: true,
   timestamp: false,
-  stateTransformer: state => state && state.toJS(),
   colors: {
     title: ({ type }) => {
       if (/_FAIL$/.test(type)) return '#CC0000';

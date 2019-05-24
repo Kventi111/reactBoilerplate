@@ -1,5 +1,5 @@
-const application = state => state.get('Application');
-const questionary = state => state.get('Questionary');
+const application = state => state.Application;
+const questionary = state => state.Questionary;
 
 
 const mapStateToProps = state => ({

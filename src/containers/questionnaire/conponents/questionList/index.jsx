@@ -1,9 +1,10 @@
 import React from 'react'
 import QuestionItem from '../questionItem'
+import { ListWrapper } from './style'
 
 function QuestionList({ list }) {
   return (
-    <div>
+    <ListWrapper>
       { list.map((
         {
           title,
@@ -12,8 +13,8 @@ function QuestionList({ list }) {
         },index) => (
         <QuestionItem key={index} title={title} type={type} questions={questions}  />
       )) }
-    </div>
+    </ListWrapper>
   )
 }
 
-export default QuestionList
+export default QuestionList;

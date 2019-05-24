@@ -1,12 +1,11 @@
-import { fromJS } from 'immutable'
 import { ACTIONS } from './constants'
 
-const initialApp = fromJS({
+const initialApp = {
   version : '',
   hasError : false,
   hasErrorMessage : '',
   loader :  false
-})
+}
 
 export const appInit = state => state.merge({
   loader : true

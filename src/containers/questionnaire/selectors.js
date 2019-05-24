@@ -1,10 +1,10 @@
-const application = state => state.get('Application');
-const questionary = state => state.get('Questionary');
+const application = state => state.Application;
+const questionary = state => state.Questionary;
 
 
 const mapStateToProps = state => ({
-  application: application(state).toJS(),
-  questionary: questionary(state).toJS(),
+  application: application(state),
+  questionary: questionary(state),
 });
 
 export default mapStateToProps;

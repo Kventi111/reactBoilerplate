@@ -1,7 +1,6 @@
-import { fromJS } from "immutable";
 import { ACTIONS } from "./constants";
 
-const initialQuestionaryState = fromJS({
+export const initialQuestionaryState = {
   error: {
     text: "",
     hasError: false
@@ -30,29 +29,29 @@ const initialQuestionaryState = fromJS({
     }
   ],
   rating: ""
-});
+};
 
-export const mount = state =>
-  state.merge({
-    loader: true
-  });
+export const mount = state => ({
+  ...state,
+  loader : true
+})
 
-export const mountFail = (state, { text }) =>
-  state.merge({
-    loader: false,
-    error: {
-      text,
-      hasErorr: true
-    }
-  });
+export const mountFail = (state, payload) => ({
+  ...state,
+  loader: false,
+  error: {
+    text : payload,
+    hasErorr: true
+  }
+})
 
-export const mountSuccess = state =>
-  state.merge({
-    loader: false,
-    error: {
-      hasErorr: false
-    }
-  });
+export const mountSuccess = state => ({
+  ...state,
+  loader: false,
+  error: {
+    hasErorr: false
+  }
+})
 
 export default function Questionary(state = initialQuestionaryState, action) {
   switch (action.type) {
@@ -60,6 +59,8 @@ export default function Questionary(state = initialQuestionaryState, action) {
       return mount(state);
     case ACTIONS.QUESTIONARY_CONTAINER_MOUNT_SUCCESS:
       return mountSuccess(state);
+    case ACTIONS.QUESTIONARY_CONTAINER_MOUNT_FAIL:
+      return mountFail(state,action.payload);
     default:
       return state;
   }
