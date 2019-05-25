@@ -11,7 +11,7 @@ export const initialQuestionaryState = {
   list: [
     {
       id : 1,
-      title : 'Вопрос 1',
+      title : 'Вы любите кофе ?',
       type : 'one',
       questions : ['1','2','3']
     },

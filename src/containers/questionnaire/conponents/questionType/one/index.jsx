@@ -1,13 +1,28 @@
 import React from 'react'
+import {
+  ItemWrapper,
+  ItemTitle,
+  ItemContent,
+  ItemRadio
+} from './style'
 
-function One() {
+function One({ questions,title }) {
+  console.log(questions);
+  
   return (
-    <div>
-      <p>Да</p>
-      <input type="radio"/>
-      <p>Нет</p>
-      <input type="radio"/>
-    </div>
+    <ItemWrapper>
+      <ItemTitle>{title}</ItemTitle>
+      <ItemContent>
+        <p>Да</p>
+        <ItemRadio>        
+          <input type="radio"/>
+        </ItemRadio>
+        <p>Нет</p>
+        <ItemRadio>
+          <input type="radio"/>
+        </ItemRadio>
+      </ItemContent>
+    </ItemWrapper>
   )
 }
 

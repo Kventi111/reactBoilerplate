@@ -2,7 +2,6 @@ import { put, takeEvery,delay } from 'redux-saga/effects'
 import { ACTIONS } from './constants'
 
 export function* appInit() {
-  yield delay(1000);
   yield put({ type: ACTIONS.QUESTIONARY_CONTAINER_MOUNT_SUCCESS })
 }
 

@@ -1,11 +1,19 @@
 import React from 'react'
+import {
+  ItemWrapper,
+  ItemTitle,
+  ItemContent,
+  ItemInput
+} from './style'
 
 function Two() {
   return (
-    <div>
-      <p>Вопрос 1</p>
-      <input type="text"/>
-    </div>
+    <ItemWrapper>
+      <ItemTitle>Вопрос 1</ItemTitle>
+      <ItemContent>
+      <ItemInput />
+      </ItemContent>
+    </ItemWrapper>
   )
 }
 
