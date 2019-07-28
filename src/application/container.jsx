@@ -5,7 +5,7 @@ export default class Application extends Component {
     console.log('applicationProps', this.props);
     
     return (
-      <div>
+      <div >
         application
       </div>
     )
