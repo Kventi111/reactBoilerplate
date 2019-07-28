@@ -1,5 +1,5 @@
 import MainPage from '../application'
-import HomePage from '../containers/main'
+import Chat from '../containers/chat'
 
 
 export const openRoute = [
@@ -12,9 +12,9 @@ export const openRoute = [
   },
   {
     exact: true,
-    path: '/home',
-    title: 'Домашняя',
-    component: HomePage,
+    path: '/chat',
+    title: 'Чат',
+    component: Chat,
     service: null,
   },
   {
