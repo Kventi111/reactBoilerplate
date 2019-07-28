@@ -1,37 +1,25 @@
 import React, { Component } from 'react'
+import Avatar from '../../../../components/global/avatar';
 import List from './components/list'
 
-import {
-  Wrapper,
-  Avatar,
-  AvatarImg,
-  AvatarNickname,
-  AvatarLocation,
-  AvatarStatus,
-  AvatarOnlineStatusCircle
-} from './style'
+import { Wrapper } from './style'
 
-export default class Navigation extends Component {
-  constructor(props) {
-    super(props)
 
-    this.state = {
-      onlineStatus : true
-    }
+const fakeUserData = {
+  imgScr : 'https://pp.userapi.com/c850024/v850024433/199fc1/F0yhYI6xAO8.jpg',
+  online : true,
+  size : "S",
+  username : "kventin",
+  location : { 
+    country : 'Russia',
+    city : "Moscow"
   }
-
+}
+export default class Navigation extends Component {
   render() {
-    const { onlineStatus } = this.state
     return (
       <Wrapper>
-        <Avatar>
-          <AvatarImg>
-            <AvatarStatus online={onlineStatus} />
-            <AvatarOnlineStatusCircle online={onlineStatus} />
-          </AvatarImg>
-          <AvatarNickname>Kventin</AvatarNickname>
-          <AvatarLocation>Russia,Moscow</AvatarLocation>
-        </Avatar>
+        <Avatar {...fakeUserData} />
         <List />
       </Wrapper>
     )
