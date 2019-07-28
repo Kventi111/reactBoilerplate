@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 
 export const Wrapper = styled.div`
-  border: 1px solid black;
-  width: 150px;
+  width: 180px;
+  background: #fff;
+  min-height: 100vh;
 `;
 
 export const Avatar = styled.div`
   height: 140px;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,3 +53,17 @@ export const AvatarLocation = styled.div`
   font-size: 12px;
   color: #363636;
 `;
+
+export const ListItem = styled.div`
+  padding: 10px 24px;
+  transition: background 1s;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+  &:hover {
+    background: rgba(170,205,188);
+  };
+`;
+
+export const ListItemIcon = styled.span``;
+

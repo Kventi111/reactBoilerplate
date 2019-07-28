@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import List from './components/list'
+
 import {
   Wrapper,
   Avatar,
@@ -30,6 +32,7 @@ export default class Navigation extends Component {
           <AvatarNickname>Kventin</AvatarNickname>
           <AvatarLocation>Russia,Moscow</AvatarLocation>
         </Avatar>
+        <List />
       </Wrapper>
     )
   }
