@@ -1,4 +1,6 @@
-import MainPage from '../containers/mainPage'
+import MainPage from '../application'
+import HomePage from '../containers/main'
+
 
 export const openRoute = [
   {
@@ -6,6 +8,13 @@ export const openRoute = [
     path: '/',
     title: 'Главная',
     component: MainPage,
+    service: null,
+  },
+  {
+    exact: true,
+    path: '/home',
+    title: 'Домашняя',
+    component: HomePage,
     service: null,
   },
   {
