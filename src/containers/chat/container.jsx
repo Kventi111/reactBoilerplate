@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import Navigation from './components/navigation';
 
-export default class Navigation extends Component {
+export default class Chat extends Component {
   render() {
     return (
       <div>
-        navigation
+        <Navigation/>
       </div>
     )
   }
