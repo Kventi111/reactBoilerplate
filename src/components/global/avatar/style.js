@@ -1,12 +1,5 @@
 import styled from 'styled-components'
-
-
-const avatarSise = {
-  S : { w : '40px', h : '40px' },
-  M : { w : '60px', h : '60px' },
-  L : { w : '80px', h : '80px' }
-};
-
+import { SIZE_W, SIZE_H } from './constants';
 
 export const Wrapper = styled.div`
   height: 140px;
@@ -17,11 +10,8 @@ export const Wrapper = styled.div`
 `;
 
 export const Img = styled.div`
-  width: ${({size}) => {
-    console.log(avatarSise.size);
-    console.log(size);
-  }};
-  height: ${({size}) => avatarSise.size.h};
+  width: ${props => SIZE_W[props.size]}px;
+  height: ${props => SIZE_H[props.size]}px;
   border-radius: 50%;
   background-image: url(${props => props.src});
   background-position: center;
@@ -30,8 +20,8 @@ export const Img = styled.div`
 `;
 
 export const OnlineStatusBorder = styled.div`
-  width: 55px;
-  height: 55px;
+  width: ${props => SIZE_W[props.size] - 5}px;
+  height: ${props => SIZE_H[props.size] - 5}px;
   border-radius: 50%;
   position: absolute;
   border: 3px solid ${props => props.online ? 'green' : 'gray'};
@@ -44,7 +34,8 @@ export const OnlineStatusCircle = styled.div`
   background: ${props => props.online ? 'green' : 'gray'};
   position: absolute;
   bottom: -5px;
-  left: 45%;
+  left: 50%;
+  transform: translate(-50%,0);
 `;
 
 export const Nickname = styled.div`

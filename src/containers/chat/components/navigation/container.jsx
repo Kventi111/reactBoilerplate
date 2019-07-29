@@ -8,7 +8,7 @@ import { Wrapper } from './style'
 const fakeUserData = {
   imgScr : 'https://pp.userapi.com/c850024/v850024433/199fc1/F0yhYI6xAO8.jpg',
   online : true,
-  size : "S",
+  size : "M",
   username : "kventin",
   location : { 
     country : 'Russia',

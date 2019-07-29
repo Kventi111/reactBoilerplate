@@ -29,7 +29,7 @@ export default class Avatar extends Component {
     return (
     <Wrapper>
       <Img src={imgScr} size={size}>
-        <OnlineStatusBorder online={online} />
+        <OnlineStatusBorder size={size} online={online} />
         <OnlineStatusCircle online={online} />
       </Img>
       <Nickname>{username}</Nickname>

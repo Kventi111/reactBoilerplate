@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import DialogList from './components/list'
+import Avatar from 'compoennts/global/avatar'
 
 import {
   Wrapper,
