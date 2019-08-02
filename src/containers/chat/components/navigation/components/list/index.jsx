@@ -10,14 +10,6 @@ const fakeMunuItem = [
   title : 'Chat',
   active : false
 },
-{
-  title : 'Call',
-  active : false
-},
-{
-  title : 'Calendar',
-  active : false
-},
 ]
 
 export default class List extends Component {

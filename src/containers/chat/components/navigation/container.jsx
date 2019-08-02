@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Avatar from '../../../../components/global/avatar';
 import List from './components/list'
 
-import { Wrapper } from './style'
+import { Wrapper,AvatarWrapper } from './style'
 
 
 const fakeUserData = {
@@ -13,13 +13,16 @@ const fakeUserData = {
   location : { 
     country : 'Russia',
     city : "Moscow"
-  }
+  },
+  border : true
 }
 export default class Navigation extends Component {
   render() {
     return (
       <Wrapper>
-        <Avatar {...fakeUserData} />
+        <AvatarWrapper>
+          <Avatar {...fakeUserData} />
+        </AvatarWrapper>
         <List />
       </Wrapper>
     )

@@ -16,7 +16,8 @@ export default class Avatar extends Component {
     status : PropTypes.bool,
     size: PropTypes.oneOf(['S',"M","L"]),
     username : PropTypes.string,
-    location : PropTypes.string
+    location : PropTypes.string,
+    border : PropTypes.bool,
   }
   render() {
     const {
@@ -24,16 +25,17 @@ export default class Avatar extends Component {
       online,
       size,
       username,
-      location : { country,city }
+      location,
+      border
     } = this.props
     return (
     <Wrapper>
       <Img src={imgScr} size={size}>
-        <OnlineStatusBorder size={size} online={online} />
+        {border && <OnlineStatusBorder size={size} online={online} />}
         <OnlineStatusCircle online={online} />
       </Img>
-      <Nickname>{username}</Nickname>
-      <Location>{`${country},${city}`}</Location>
+      {username && <Nickname>{username}</Nickname>}
+      {location && <Location>{`${location.country},${location.city}`}</Location>}
     </Wrapper>
     )
   }

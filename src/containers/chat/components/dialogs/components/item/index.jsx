@@ -1,15 +1,33 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
+import Avatar from 'components/global/avatar'
+
 
 import {
-  DialogItem
+  DialogItem,
+  UserInfo,
+  UserName,
+  UserLastMessage
 } from '../../style'
 
-export default class Item extends Component {
-  render() {
-    return (
-      <DialogItem>
-        1222222
-      </DialogItem>
-    )
-  }
+export const Item = ({
+  avatar,
+  username,
+  lastMessage
+}) => (
+  <DialogItem>
+    <Avatar {...avatar} />
+    <UserInfo>
+      <UserName>{username}</UserName>
+      <UserLastMessage>{lastMessage}</UserLastMessage>
+    </UserInfo>
+  </DialogItem>
+);
+
+Item.propTypes = {
+  avatar : PropTypes.object,
+  username : PropTypes.string,
+  lastMessage : PropTypes.string
 }
+
+export default Item

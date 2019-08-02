@@ -31,4 +31,22 @@ export const DialogList = styled.div`
 export const DialogItem = styled.div`
   background: #fff;
   padding: 10px;
+  display: flex;
+  margin: 5px 0;
+`;
+
+export const UserInfo = styled.div`
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+`;
+
+export const UserName = styled.p`
+  font-weight: bold;
+`;
+
+export const UserLastMessage = styled.p`
+  font-size: 12px;
+  color: #363636;
 `;

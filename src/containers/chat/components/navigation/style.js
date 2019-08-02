@@ -3,7 +3,14 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   width: 180px;
   background: #fff;
-  min-height: 100vh;
+`;
+
+export const AvatarWrapper = styled.div`
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const ListItem = styled.div`
