@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Navigation from './components/navigation';
-import Dialogs from './components/dialogs'
+import Dialogs from './components/dialogs';
+import Dialog from './components/dialog';
 
 import {
   Wrapper
@@ -12,6 +13,7 @@ export default class Chat extends Component {
      <Wrapper>
         <Navigation />
         <Dialogs />
+        <Dialog />
      </Wrapper>
     );
   }
