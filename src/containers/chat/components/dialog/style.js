@@ -38,8 +38,18 @@ export const DialogDate = styled.div`
   padding: 10px 0;
 `;
 
+export const MessageWrapper = styled.div`
+  display: flex;
+  justify-content: ${props => (props.me ? 'flex-end' : 'flex-start')};
+`;
+
 export const MessageItem = styled.div`
   padding:  10px 24px;
+  background-color: ${props => (props.me ? 'white' : '#D9E1E9')};
+  border-bottom-left-radius: ${props => (props.me ? '5px' : '0')};
+  border-top-left-radius: ${props => (props.me ? '5px' : '0')};
+  border-bottom-right-radius: ${props => (props.me ? '0' : '5px')};
+  border-top-right-radius: ${props => (props.me ? '0' : '5px')};
 `;
 
 export const MessageUserName = styled.div`
