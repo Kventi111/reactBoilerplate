@@ -15,6 +15,7 @@ body {
 
 .mainWarapper {
   max-width: 960px;
-  min-height: 800px;
+  max-height: 600px;
+  overflow: hidden;
   margin:  0 auto;
 }

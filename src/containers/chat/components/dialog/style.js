@@ -27,6 +27,8 @@ export const UserLastMessage = styled.p`
 export const DialogWrapper = styled.div`
   background: #EAF3F5;
   height: 100%;
+  position: relative;
+  max-height: 518px;
 `;
 
 export const DialogDate = styled.div`
@@ -38,10 +40,17 @@ export const DialogDate = styled.div`
   padding: 10px 0;
 `;
 
+export const MessageList  = styled.div`
+  max-height: 404px;
+  overflow: scroll;
+`;
+
+
 export const MessageWrapper = styled.div`
   display: flex;
   justify-content: ${props => (props.me ? 'flex-end' : 'flex-start')};
 `;
+
 
 export const MessageItem = styled.div`
   padding:  10px 24px;
@@ -60,4 +69,21 @@ export const MessageUserName = styled.div`
 export const MessageText = styled.div`
   font-size: 14px;
   font-weight: 500;
+`;
+
+
+export const MessageSenderWrapper = styled.div`
+  padding: 10px 20px; 
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+`;
+
+export const MessageSenderInput = styled.input`
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: #fff;
 `;

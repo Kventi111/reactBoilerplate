@@ -25,6 +25,8 @@ export const SearchInput = styled.input`
 export const DialogList = styled.div`
   padding: 10px;
   display: flex;
+  overflow: scroll;
+  max-height: 600px;
   flex-direction: column;
 `;
 

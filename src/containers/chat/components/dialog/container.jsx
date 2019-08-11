@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import Header from './components/header';
+import MessageSender from './components/messageSend';
 import {
   DialogWrapper,
   DialogDate,
   MessageWrapper,
   MessageItem,
   MessageUserName,
-  MessageText
+  MessageText,
+  MessageList
 } from './style';
 
 export default class Dialog extends Component {
@@ -16,6 +18,17 @@ export default class Dialog extends Component {
          <Header />
          <DialogWrapper>
           <DialogDate>today</DialogDate>
+          <MessageList>
+          <MessageWrapper me={true}>
+            <MessageItem me={true}>
+              <MessageUserName>
+                Kventin
+              </MessageUserName>
+              <MessageText>
+                Привет
+              </MessageText>
+            </MessageItem>
+          </MessageWrapper>
           <MessageWrapper me={true}>
             <MessageItem me={true}>
               <MessageUserName>
@@ -29,43 +42,115 @@ export default class Dialog extends Component {
           <MessageWrapper>
             <MessageItem>
               <MessageUserName>
-                Donald Tramp
+                Kventin
               </MessageUserName>
               <MessageText>
-                Йоу бро салам есть ЖИ!
+                Привет
               </MessageText>
             </MessageItem>
           </MessageWrapper>
           <MessageWrapper>
             <MessageItem>
               <MessageUserName>
-                Donald Tramp
+                Kventin
               </MessageUserName>
               <MessageText>
-                Все чики пуки сам как ?
+                Привет
+              </MessageText>
+            </MessageItem>
+          </MessageWrapper>
+          <MessageWrapper>
+            <MessageItem>
+              <MessageUserName>
+                Kventin
+              </MessageUserName>
+              <MessageText>
+                Привет
+              </MessageText>
+            </MessageItem>
+          </MessageWrapper>
+          <MessageWrapper>
+            <MessageItem>
+              <MessageUserName>
+                Kventin
+              </MessageUserName>
+              <MessageText>
+                Привет
+              </MessageText>
+            </MessageItem>
+          </MessageWrapper>
+          <MessageWrapper>
+            <MessageItem>
+              <MessageUserName>
+                Kventin
+              </MessageUserName>
+              <MessageText>
+                Привет
               </MessageText>
             </MessageItem>
           </MessageWrapper>
           <MessageWrapper me={true}>
             <MessageItem me={true}>
               <MessageUserName>
-                kventin
+                Kventin
               </MessageUserName>
               <MessageText>
-                да ниче вот в америку сорбался
+                Привет
               </MessageText>
             </MessageItem>
           </MessageWrapper>
           <MessageWrapper me={true}>
             <MessageItem me={true}>
               <MessageUserName>
-                kventin
+                Kventin
               </MessageUserName>
               <MessageText>
-                местечко организуешь в белом доме ?
+                Привет
               </MessageText>
             </MessageItem>
           </MessageWrapper>
+          <MessageWrapper me={true}>
+            <MessageItem me={true}>
+              <MessageUserName>
+                Kventin
+              </MessageUserName>
+              <MessageText>
+                Привет
+              </MessageText>
+            </MessageItem>
+          </MessageWrapper>
+          <MessageWrapper me={true}>
+            <MessageItem me={true}>
+              <MessageUserName>
+                Kventin
+              </MessageUserName>
+              <MessageText>
+                Привет
+              </MessageText>
+            </MessageItem>
+          </MessageWrapper>
+          <MessageWrapper me={true}>
+            <MessageItem me={true}>
+              <MessageUserName>
+                Kventin
+              </MessageUserName>
+              <MessageText>
+                Привет
+              </MessageText>
+            </MessageItem>
+          </MessageWrapper>
+          <MessageWrapper me={true}>
+            <MessageItem me={true}>
+              <MessageUserName>
+                Kventin
+              </MessageUserName>
+              <MessageText>
+                Привет
+              </MessageText>
+            </MessageItem>
+          </MessageWrapper>
+          </ MessageList>
+          <MessageSender />
          </DialogWrapper>
       </div>
     )

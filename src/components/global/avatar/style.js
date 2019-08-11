@@ -20,8 +20,8 @@ export const Img = styled.div`
 `;
 
 export const OnlineStatusBorder = styled.div`
-  width: ${props => SIZE_W[props.size] - 5}px;
-  height: ${props => SIZE_H[props.size] - 5}px;
+  width: ${props => SIZE_W[props.size]}px;
+  height: ${props => SIZE_H[props.size]}px;
   border-radius: 50%;
   position: absolute;
   border: 3px solid ${props => props.online ? 'green' : 'gray'};

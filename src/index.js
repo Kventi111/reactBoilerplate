@@ -11,10 +11,10 @@ import './style.css'
 
 ReactDOM.render(
   <div className="mainWarapper">
-  <Provider store={store()}>
-    <Router>
-      {routes.openRoute.map((route,i) => <Route key={i} {...route} />)}
-    </Router>
-  </Provider>
+    <Provider store={store()}>
+      <Router>
+        {routes.openRoute.map((route,i) => <Route key={i} {...route} />)}
+      </Router>
+    </Provider>
   </div>, document.getElementById('root')
 );

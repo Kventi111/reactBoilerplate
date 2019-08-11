@@ -1,5 +1,6 @@
 import { combineReducers }  from 'redux-immutable';
 import Application from './reducers';
+import ChatContainerReducer from '../containers/chat/reducer'
 
 /**  
  *
@@ -8,4 +9,5 @@ import Application from './reducers';
  */
 export default combineReducers({
     Application,
+    ChatContainerReducer
 })

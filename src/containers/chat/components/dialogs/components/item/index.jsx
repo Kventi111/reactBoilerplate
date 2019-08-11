@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Avatar from 'components/global/avatar'
 
-
 import {
   DialogItem,
   UserInfo,
@@ -13,9 +12,11 @@ import {
 export const Item = ({
   avatar,
   username,
-  lastMessage
+  lastMessage,
+  id,
+  setCurrentDialog
 }) => (
-  <DialogItem>
+  <DialogItem onClick={() => setCurrentDialog(id)}>
     <Avatar {...avatar} />
     <UserInfo>
       <UserName>{username}</UserName>
