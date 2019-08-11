@@ -118,7 +118,6 @@ const initialMessageState = fromJS([
     {
       id : 1,
       author : '',
-      parthner : '',
       list : [
         {
           id : 1123,
