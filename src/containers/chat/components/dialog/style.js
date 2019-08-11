@@ -29,6 +29,7 @@ export const DialogWrapper = styled.div`
   height: 100%;
   position: relative;
   max-height: 518px;
+  max-width: 500px;
 `;
 
 export const DialogDate = styled.div`
@@ -54,6 +55,8 @@ export const MessageWrapper = styled.div`
 
 export const MessageItem = styled.div`
   padding:  10px 24px;
+  margin: 0 0 10px 0;
+  max-width: 50%;
   background-color: ${props => (props.me ? 'white' : '#D9E1E9')};
   border-bottom-left-radius: ${props => (props.me ? '5px' : '0')};
   border-top-left-radius: ${props => (props.me ? '5px' : '0')};
@@ -62,12 +65,12 @@ export const MessageItem = styled.div`
 `;
 
 export const MessageUserName = styled.div`
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
 `;
 
 export const MessageText = styled.div`
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
 `;
 

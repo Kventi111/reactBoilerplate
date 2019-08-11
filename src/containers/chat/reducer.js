@@ -117,13 +117,13 @@ const initialDialogState = fromJS([
 const initialMessageState = fromJS([
     {
       id : 1,
-      author : '',
+      reciever : 'Donald Tramp',
       list : [
         {
           id : 1123,
           author : 'Kventin',
           reciever : '12333123',
-          text : 'xcvx33cv1'
+          text : 'tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus aenean vel'
         },
         {
           id : 1123,
@@ -135,8 +135,8 @@ const initialMessageState = fromJS([
           id : 1123,
           author : '123213',
           reciever : 'Kv33entin',
-          text : 'xcvxc33v1'
-        },
+          text : '12312ajskl djkasdjaklsj dkasdl;sakl;kasldkasld klaksdajskdjaskldaslkjdka sjdklajskdj aklsdjlk3'
+        }, 
         {
           id : 1123,
           author : 'Kventin',
@@ -148,7 +148,7 @@ const initialMessageState = fromJS([
     {
       id : 2,
       author : '',
-      parthner : '',
+      reciever : 'Веселый Колобоко',
       list : [
         {
           id : 1123,
@@ -179,7 +179,7 @@ const initialMessageState = fromJS([
     {
       id : 3,
       author : '',
-      parthner : '',
+      reciever : 'Нарко Ромашка',
       list : [
         {
           id : 1123,
@@ -210,7 +210,7 @@ const initialMessageState = fromJS([
     {
       id : 4,
       author : '',
-      parthner : '',
+      reciever : 'Кунгфу Панда',
       list : [
         {
           id : 1123,
@@ -241,7 +241,7 @@ const initialMessageState = fromJS([
     {
       id : 5,
       author : '',
-      parthner : '',
+      reciever : 'Милый Котя',
       list : [
         {
           id : 1123,
@@ -272,7 +272,7 @@ const initialMessageState = fromJS([
     {
       id : 2,
       author : '',
-      parthner : '',
+      reciever : 'Хитрая Лисичка',
       list : [
         {
           id : 1123,
@@ -303,7 +303,7 @@ const initialMessageState = fromJS([
     {
       id : 6,
       author : '',
-      parthner : '',
+      reciever : 'Анонимный Аноним',
       list : [
         {
           id : 1123,
@@ -334,7 +334,7 @@ const initialMessageState = fromJS([
     {
       id : 7,
       author : '',
-      parthner : '',
+      reciever : 'Анонимный Аноним',
       list : [
         {
           id : 1123,
@@ -365,7 +365,7 @@ const initialMessageState = fromJS([
     {
       id : 8,
       author : '',
-      parthner : '',
+      reciever : 'Анонимный Аноним',
       list : [
         {
           id : 1123,
@@ -388,7 +388,7 @@ const initialMessageState = fromJS([
         {
           id : 1123,
           author : 'Kventin',
-          reciever : '123123',
+          reciever : '12312ajskldjkasdjaklsjdkasdl;sakl;kasldkasldklaksdajskdjaskldaslkjdkasjdklajskdjaklsdjlk3',
           text : 'gdhxcvdgh1'
         }
       ]
@@ -396,7 +396,7 @@ const initialMessageState = fromJS([
     {
       id : 9,
       author : '',
-      parthner : '',
+      reciever : 'Анонимный Аноним',
       list : [
         {
           id : 1123,

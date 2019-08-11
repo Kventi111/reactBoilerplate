@@ -16,7 +16,7 @@ export default class Dialog extends Component {
     const { messages } = this.props;
     return (
       <div>
-         <Header />
+         <Header messagesName={messages.reciever} />
          <DialogWrapper>
           <DialogDate>today</DialogDate>
           <MessageList>
