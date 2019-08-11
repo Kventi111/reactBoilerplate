@@ -9,13 +9,13 @@ import {
 
 export default class Dialogs extends Component {
   render() {
-    const { setCurrentDialog } = this.props;
+    const { setCurrentDialog,dialogs } = this.props;
     return (
       <Wrapper>
         <SearchWrapper>
           <SearchInput placeholder="Поиск" />
         </SearchWrapper>
-        <DialogList setCurrentDialog={setCurrentDialog} />
+        <DialogList dialogs={dialogs} setCurrentDialog={setCurrentDialog} />
       </Wrapper>
     )
   }

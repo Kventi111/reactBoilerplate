@@ -13,142 +13,25 @@ import {
 
 export default class Dialog extends Component {
   render() {
+    const { messages } = this.props;
     return (
       <div>
          <Header />
          <DialogWrapper>
           <DialogDate>today</DialogDate>
           <MessageList>
-          <MessageWrapper me={true}>
-            <MessageItem me={true}>
-              <MessageUserName>
-                Kventin
-              </MessageUserName>
-              <MessageText>
-                Привет
-              </MessageText>
-            </MessageItem>
-          </MessageWrapper>
-          <MessageWrapper me={true}>
-            <MessageItem me={true}>
-              <MessageUserName>
-                Kventin
-              </MessageUserName>
-              <MessageText>
-                Привет
-              </MessageText>
-            </MessageItem>
-          </MessageWrapper>
-          <MessageWrapper>
-            <MessageItem>
-              <MessageUserName>
-                Kventin
-              </MessageUserName>
-              <MessageText>
-                Привет
-              </MessageText>
-            </MessageItem>
-          </MessageWrapper>
-          <MessageWrapper>
-            <MessageItem>
-              <MessageUserName>
-                Kventin
-              </MessageUserName>
-              <MessageText>
-                Привет
-              </MessageText>
-            </MessageItem>
-          </MessageWrapper>
-          <MessageWrapper>
-            <MessageItem>
-              <MessageUserName>
-                Kventin
-              </MessageUserName>
-              <MessageText>
-                Привет
-              </MessageText>
-            </MessageItem>
-          </MessageWrapper>
-          <MessageWrapper>
-            <MessageItem>
-              <MessageUserName>
-                Kventin
-              </MessageUserName>
-              <MessageText>
-                Привет
-              </MessageText>
-            </MessageItem>
-          </MessageWrapper>
-          <MessageWrapper>
-            <MessageItem>
-              <MessageUserName>
-                Kventin
-              </MessageUserName>
-              <MessageText>
-                Привет
-              </MessageText>
-            </MessageItem>
-          </MessageWrapper>
-          <MessageWrapper me={true}>
-            <MessageItem me={true}>
-              <MessageUserName>
-                Kventin
-              </MessageUserName>
-              <MessageText>
-                Привет
-              </MessageText>
-            </MessageItem>
-          </MessageWrapper>
-          <MessageWrapper me={true}>
-            <MessageItem me={true}>
-              <MessageUserName>
-                Kventin
-              </MessageUserName>
-              <MessageText>
-                Привет
-              </MessageText>
-            </MessageItem>
-          </MessageWrapper>
-          <MessageWrapper me={true}>
-            <MessageItem me={true}>
-              <MessageUserName>
-                Kventin
-              </MessageUserName>
-              <MessageText>
-                Привет
-              </MessageText>
-            </MessageItem>
-          </MessageWrapper>
-          <MessageWrapper me={true}>
-            <MessageItem me={true}>
-              <MessageUserName>
-                Kventin
-              </MessageUserName>
-              <MessageText>
-                Привет
-              </MessageText>
-            </MessageItem>
-          </MessageWrapper>
-          <MessageWrapper me={true}>
-            <MessageItem me={true}>
-              <MessageUserName>
-                Kventin
-              </MessageUserName>
-              <MessageText>
-                Привет
-              </MessageText>
-            </MessageItem>
-          </MessageWrapper>
-          <MessageWrapper me={true}>
-            <MessageItem me={true}>
-              <MessageUserName>
-                Kventin
-              </MessageUserName>
-              <MessageText>
-                Привет
-              </MessageText>
-            </MessageItem>
-          </MessageWrapper>
+          {messages.list ? messages.list.map((mes,index) => (
+              <MessageWrapper key={index} me={mes.author === 'Kventin'}>
+              <MessageItem me={mes.author === 'Kventin'}>
+                <MessageUserName>
+                  {mes.author}
+                </MessageUserName>
+                <MessageText>
+                  {mes.text}
+                </MessageText>
+              </MessageItem>
+            </MessageWrapper>
+          )) : 'Выбери диалог ленвая ТВАРЬ!!!!!!'}
           </ MessageList>
           <MessageSender />
          </DialogWrapper>

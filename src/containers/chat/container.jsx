@@ -9,12 +9,15 @@ import {
 export default class Chat extends Component {
   render() {
     const {
-      setCurrentDialog
+      setCurrentDialog,
+      dialogs,
+      currentMessages
     } = this.props;
+    
     return (
      <Wrapper>
-        <Dialogs setCurrentDialog={setCurrentDialog} />
-        <Dialog  />
+        <Dialogs dialogs={dialogs} setCurrentDialog={setCurrentDialog} />
+        <Dialog  messages={currentMessages} />
      </Wrapper>
     );
   }
