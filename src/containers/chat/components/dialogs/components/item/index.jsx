@@ -6,7 +6,8 @@ import {
   DialogItem,
   UserInfo,
   UserName,
-  UserLastMessage
+  UserLastMessage,
+  DialogItemActive
 } from '../../style'
 
 export const Item = ({
@@ -14,7 +15,8 @@ export const Item = ({
   username,
   lastMessage,
   id,
-  setCurrentDialog
+  setCurrentDialog,
+  active
 }) => (
   <DialogItem onClick={() => setCurrentDialog(id)}>
     <Avatar {...avatar} />
@@ -22,6 +24,7 @@ export const Item = ({
       <UserName>{username}</UserName>
       <UserLastMessage>{lastMessage}</UserLastMessage>
     </UserInfo>
+    <DialogItemActive selected={active} />
   </DialogItem>
 );
 

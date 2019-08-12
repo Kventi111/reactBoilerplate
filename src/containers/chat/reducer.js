@@ -142,6 +142,30 @@ const initialMessageState = fromJS([
           author : 'Kventin',
           reciever : '123123',
           text : 'gdhxcvdgh1'
+        },
+        {
+          id : 1123,
+          author : 'Kventin',
+          reciever : '12333123',
+          text : 'tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus aenean vel'
+        },
+        {
+          id : 1123,
+          author : '123123',
+          reciever : 'Kventin',
+          text : '1123123'
+        },
+        {
+          id : 1123,
+          author : '123213',
+          reciever : 'Kv33entin',
+          text : '12312ajskl djkasdjaklsj dkasdl;sakl;kasldkasld klaksdajskdjaskldaslkjdka sjdklajskdj aklsdjlk3'
+        }, 
+        {
+          id : 1123,
+          author : 'Kventin',
+          reciever : '123123',
+          text : 'gdhxcvdgh1'
         }
       ]
     },

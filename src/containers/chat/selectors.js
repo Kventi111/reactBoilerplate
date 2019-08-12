@@ -17,10 +17,36 @@ const currentDialogCreatedSelector = createSelector(
   }
 )
 
+const selectActiveDialogCreatedSelector = createSelector(
+  dialogsSelector,
+  currentDialogIdSelector,
+  (dialogList,id) => {
+    if (id) {
+      return dialogList.map(di => (di.get('id') === id ? di.set('active',true) : di.set('active',false)))
+    } else {
+      return dialogList;
+    }
+  }
+)
+
+const selectActivetDialogAvatar = createSelector(
+  dialogsSelector,
+  currentDialogIdSelector,
+  (dialogList,id) => {
+    if (id) {
+      const res = dialogList.find(di => di.get('id') === id);
+      return res.get('avatar')
+    } else {
+      return dialogList;
+    }
+  }
+)
+
 const mapStateToProps = state => ({
-  dialogs: dialogsSelector(state).toJS(),
+  dialogs: selectActiveDialogCreatedSelector(state).toJS(),
   messages : messagesSelector(state).toJS(),
-  currentMessages : currentDialogCreatedSelector(state).toJS()
+  currentMessages : currentDialogCreatedSelector(state).toJS(),
+  currentDialogAvatar : selectActivetDialogAvatar(state).toJS()
 });
 
 export default mapStateToProps;

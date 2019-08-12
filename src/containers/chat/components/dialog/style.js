@@ -82,11 +82,13 @@ export const MessageSenderWrapper = styled.div`
   width: 100%;
 `;
 
-export const MessageSenderInput = styled.input`
+export const MessageSenderInput = styled.textarea`
   width: 100%;
+  height: 50px;
   padding: 10px;
   font-size: 16px;
   border: none;
   outline: none;
   background: #fff;
+  resize: none;
 `;

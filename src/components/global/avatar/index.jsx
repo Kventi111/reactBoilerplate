@@ -19,6 +19,16 @@ export default class Avatar extends Component {
     location : PropTypes.string,
     border : PropTypes.bool,
   }
+
+  static defaultProps = {
+    username : '',
+    imgScr : '',
+    location : '',
+    border : false,
+    status : false,
+    size : 'S'
+  }
+  
   render() {
     const {
       imgScr,
@@ -40,3 +50,4 @@ export default class Avatar extends Component {
     )
   }
 }
+

@@ -19,7 +19,6 @@ export const SearchInput = styled.input`
   height: 30px;
   width: 250px;
   outline: none;
-  border-radius: 30px;
 `;
 
 export const DialogList = styled.div`
@@ -35,6 +34,21 @@ export const DialogItem = styled.div`
   padding: 10px;
   display: flex;
   margin: 5px 0;
+  cursor: pointer;
+  transition: background-color .4s;
+  position: relative;
+  &:hover {
+    background-color: #c3c3c3;
+  }
+`;
+
+export const DialogItemActive = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 4px;
+  background: ${props => (props.selected ? '#008000' : 'gray')};
 `;
 
 export const UserInfo = styled.div`

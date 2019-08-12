@@ -12,6 +12,7 @@ export default class List extends Component {
       <DialogList>
         {dialogs.map(item => 
           <Item 
+            active={item.active}
             setCurrentDialog={setCurrentDialog}
             key={item.id} 
             id={item.id} 
