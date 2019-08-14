@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import { APP } from 'application/constants'
 import Header from "./components/header";
 import MessageSender from "./components/messageSend";
 import Empty from "./components/emptyDialog";
@@ -13,6 +14,8 @@ import {
 
 export default class Dialog extends Component {
   render() {
+    {APP.RENDER_LOG && console.count('Dialog')}   // eslint-disable-line no-lone-blocks
+
     const { messages, currentAvatar } = this.props;
     return (
       <div>

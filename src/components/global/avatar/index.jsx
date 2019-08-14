@@ -30,6 +30,8 @@ export default class Avatar extends Component {
   }
   
   render() {
+    // console.count('Avatar');
+
     const {
       imgScr,
       online,

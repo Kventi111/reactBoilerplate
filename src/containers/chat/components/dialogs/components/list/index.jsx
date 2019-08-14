@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { APP } from 'application/constants'
 import Item from '../item'
 
 import {
@@ -8,6 +9,8 @@ import {
 export default class List extends Component {
   render() {
     const { setCurrentDialog,dialogs } = this.props;
+    {APP.RENDER_LOG && console.count('Dialogs List')}   // eslint-disable-line no-lone-blocks
+
     return (
       <DialogList>
         {dialogs.map(item => 
