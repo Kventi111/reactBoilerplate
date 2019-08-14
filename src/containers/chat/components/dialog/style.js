@@ -92,3 +92,17 @@ export const MessageSenderInput = styled.textarea`
   background: #fff;
   resize: none;
 `;
+
+export const EmptyDialogWrapper = styled.div`
+  height: 600px;
+  width: 500px;
+  background: rgba(221,240,239);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const EmptyDialogText = styled.div`
+  font-size: 18px;
+  font-weight: bold;
+`;
