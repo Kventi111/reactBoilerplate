@@ -1,5 +1,6 @@
 import MainPage from '../application'
 import Chat from '../containers/chat'
+import Auth from '../containers/auth'
 
 
 export const openRoute = [
@@ -7,7 +8,7 @@ export const openRoute = [
     exact: true,
     path: '/',
     title: 'Главная',
-    component: MainPage,
+    component: Auth,
     service: null,
   },
   {

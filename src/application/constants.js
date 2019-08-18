@@ -7,5 +7,5 @@ export const ACTIONS = keyMirror({
 })
 
 export const APP = {
-  RENDER_LOG : true
+  RENDER_LOG : false
 }
