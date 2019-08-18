@@ -33,12 +33,15 @@ export const unmount = state => state.merge({
   mount : false
 })
 
-export const authFormChangeData = (state,{fieldId,fieldValue}) => state.setIn(['loginForm',fieldId],fieldValue)
+export const loginFormChangeData = (state,{fieldId,fieldValue}) => state.setIn(['loginForm',fieldId],fieldValue)
+export const registerFormChangeData = (state,{fieldId,fieldValue}) => state.setIn(['loginForm',fieldId],fieldValue)
 
 export default function authContainerReducer(state = initialState,{type,payload}) {
   switch (type) {
-    case ACTIONS.FORM_DATA_CHANGE_ACTION:
-      return authFormChangeData(state,payload)
+    case ACTIONS.LOGIN_FORM_DATA_CHANGE_ACTION:
+      return loginFormChangeData(state,payload)
+    case ACTIONS.REGISTER_FORM_DATA_CHANGE_ACTION:
+      return registerFormChangeData(state,payload)
     default:
       return state;
   }

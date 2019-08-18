@@ -16,16 +16,18 @@ export default class Login extends Component {
         <p>Вход в приложение RChat</p>
         <div>
           <div>
-            <label  htmlFor={FIELD_ID.EMAIL}>Логин</label>
+            <label  htmlFor={FIELD_ID.EMAIL}>Логин</label><br/>
             <input  id={FIELD_ID.EMAIL} type="text" onChange={onHandleChange}/>
           </div>
           <div>
-            <label  htmlFor={FIELD_ID.PASSWORD}>Пароль</label>
+            <label  htmlFor={FIELD_ID.PASSWORD}>Пароль</label><br/>
             <input id={FIELD_ID.PASSWORD} type="text" onChange={onHandleChange}/>
           </div>
+          <br/>
           <button id={FIELD_ID.LOGIN_BTN}>Войти</button>
         </div>
-        <i>Вы еще не зарегистрированны ?</i>
+        <br/>
+        <i>Вы еще не зарегистрированны ?</i> <br/>
         <b>Зарегистрироваться</b>
       </Content>
     );

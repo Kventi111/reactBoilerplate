@@ -10,12 +10,20 @@ import {
 
 export default class Auth extends Component {
 
-  handleChange = (e) => {
+  loginHandleChange = (e) => {
     const { id, value } = e.target;
-    const { handleChangeAction } = this.props;
+    const { loginFromDataChangeAction } = this.props;
     
-    handleChangeAction({fieldId : id,fieldValue : value})
+    loginFromDataChangeAction({fieldId : id,fieldValue : value})
   }
+
+  registerHandleChange = (e) => {
+    const { id, value } = e.target;
+    const { registerFromDataChangeAction } = this.props;
+    
+    registerFromDataChangeAction({fieldId : id,fieldValue : value})
+  }
+
   render() {
     {APP.RENDER_LOG && console.count('Chat')}   // eslint-disable-line no-lone-blocks
     const { authData } = this.props;
@@ -23,8 +31,8 @@ export default class Auth extends Component {
     return (
      <Wrapper>
        {authData.registerView 
-        ? <Register />
-        : <Login onHandleChange={this.handleChange} />
+        ? <Register onHandleChange={this.registerHandleChange} />
+        : <Login onHandleChange={this.loginHandleChange} />
        }
      </Wrapper>
     );
