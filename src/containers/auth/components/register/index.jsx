@@ -32,7 +32,7 @@ export default class Register extends Component {
             <input id={FIELD_ID.PASSWORD} type="text" onChange={onHandleChange}/>
           </div>
           <br/>
-          <button id={FIELD_ID.REGISTER_BTN}>Зарегистрироваться</button>
+          <button id={FIELD_ID.REGISTER_BTN} onClick={onHandleChange}>Зарегистрироваться</button>
         </div>
         <br/>
         <i>Уже есть аккаунт ?</i> <br/>

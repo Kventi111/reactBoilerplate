@@ -18,7 +18,7 @@ const initialState = fromJS({
   mount : false,
   loading : true,
   error : false,
-  registerView : false,
+  registerView : true,
   registrationForm : initialRegisterState,
   loginForm : initialLoginState
 })
@@ -34,7 +34,7 @@ export const unmount = state => state.merge({
 })
 
 export const loginFormChangeData = (state,{fieldId,fieldValue}) => state.setIn(['loginForm',fieldId],fieldValue)
-export const registerFormChangeData = (state,{fieldId,fieldValue}) => state.setIn(['loginForm',fieldId],fieldValue)
+export const registerFormChangeData = (state,{fieldId,fieldValue}) => state.setIn(['registrationForm',fieldId],fieldValue)
 
 export default function authContainerReducer(state = initialState,{type,payload}) {
   switch (type) {
