@@ -1,5 +1,7 @@
-import openRoute from './openRoute';
+import openRoutes from './openRoute';
+import secureRoutes from './secureRoute'
 
 export const routes = {
-  openRoute : openRoute,
+  openRoutes,
+  secureRoutes
 };

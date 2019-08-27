@@ -8,6 +8,11 @@ import {
 } from './style'
 
 export default class Chat extends Component {
+  
+  componentWillMount() {
+    this.props.mount()
+  }
+
   render() {
     {APP.RENDER_LOG && console.count('Chat')}   // eslint-disable-line no-lone-blocks
 
@@ -15,13 +20,15 @@ export default class Chat extends Component {
       setCurrentDialog,
       dialogs,
       currentMessages,
-      currentDialogAvatar
+      currentDialogAvatar,
+      user,
+      mount
     } = this.props;
 
     return (
      <Wrapper>
         <Dialogs dialogs={dialogs} setCurrentDialog={setCurrentDialog} />
-        <Dialog currentAvatar={currentDialogAvatar} messages={currentMessages} />
+        <Dialog currentAvatar={currentDialogAvatar} messages={currentMessages} user={user} />
      </Wrapper>
     );
   }

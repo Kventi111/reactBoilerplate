@@ -1,5 +1,10 @@
 import { ACTIONS } from './constants';
 
+
+export const mount = () => ({
+  type : ACTIONS.CHAT_CONTAINER_MOUNT,
+})
+
 export const setCurrentDialog = id => ({
   type : ACTIONS.SET_CURRENT_DIALOG,
   payload : id

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { APP } from 'application/constants'
 import Item from '../item'
 
@@ -7,21 +8,23 @@ import {
 } from '../../style'
 
 export default class List extends Component {
+  static propTypes = {
+    dialogs : PropTypes.object
+  }
+
   render() {
     const { setCurrentDialog,dialogs } = this.props;
     {APP.RENDER_LOG && console.count('Dialogs List')}   // eslint-disable-line no-lone-blocks
 
     return (
       <DialogList>
-        {dialogs.map(item => 
+        {dialogs.list.map(item => 
           <Item 
-            active={item.active}
+            key={item._id}
+            id={item._id}
             setCurrentDialog={setCurrentDialog}
-            key={item.id} 
-            id={item.id} 
-            avatar={item.avatar} 
-            username={item.username} 
-            lastMessage={item.lastMessage} 
+            username={item.partner.fullname}
+            lastMessage={item.lastMessage.text}
           />
         )}
       </DialogList>

@@ -1,9 +1,18 @@
 import keyMirror from 'keymirror';
 
 export const ACTIONS = keyMirror({
+  CHAT_CONTAINER_MOUNT : null,
   CHAT_CONTAINER_MOUNT_SUCCESS : null,
-  CHAT_CONTAINER_MOUNT_ERROR : null,
-  HANDLE_CHANGE_ACTION : null,
+  CHAT_CONTAINER_MOUNT_FAIL : null,
 
+  CHAT_CONTAINER_GET_DIALOGS : null,
+  CHAT_CONTAINER_GET_DIALOGS_SUCCESS : null,
+  CHAT_CONTAINER_GET_DIALOGS_FAIL: null,
+
+  HANDLE_CHANGE_ACTION : null,
   SET_CURRENT_DIALOG : null,
+
+  GET_USER_REQUEST : null,
+  GET_USER_SUCCESS : null,
+  GET_USER_FAIL : null,
 })

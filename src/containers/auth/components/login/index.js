@@ -24,7 +24,7 @@ export default class Login extends Component {
             <input id={FIELD_ID.PASSWORD} type="text" onChange={onHandleChange}/>
           </div>
           <br/>
-          <button id={FIELD_ID.LOGIN_BTN}>Войти</button>
+          <button onClick={onHandleChange} id={FIELD_ID.LOGIN_BTN}>Войти</button>
         </div>
         <br/>
         <i>Вы еще не зарегистрированны ?</i> <br/>

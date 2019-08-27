@@ -16,10 +16,10 @@ export default class Dialog extends Component {
   render() {
     {APP.RENDER_LOG && console.count('Dialog')}   // eslint-disable-line no-lone-blocks
 
-    const { messages, currentAvatar } = this.props;
+    const { messages, currentAvatar, user } = this.props;
     return (
       <div>
-        {!messages.list ? 
+        {!messages ? 
           <Empty />
           : 
           <Fragment>

@@ -18,7 +18,7 @@ const initialState = fromJS({
   mount : false,
   loading : true,
   error : false,
-  registerView : true,
+  registerView : false,
   registrationForm : initialRegisterState,
   loginForm : initialLoginState
 })

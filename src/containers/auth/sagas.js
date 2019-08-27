@@ -1,9 +1,11 @@
 import { put, takeEvery,select } from 'redux-saga/effects'
 import { ACTIONS,LOCAL_REDUCER,FIELD_ID } from './constants'
+import userApi from 'api/user'
 
 const registerFormDataSelector = state => state.getIn([LOCAL_REDUCER,'registrationForm'])
+const loginFormDataSelector = state => state.getIn([LOCAL_REDUCER,'loginForm'])
 
-
+  
 export function* createUserRequestSaga() {
   const data = yield select(registerFormDataSelector);
 
@@ -12,23 +14,28 @@ export function* createUserRequestSaga() {
     email : data.get(FIELD_ID.EMAIL),
     password : data.get(FIELD_ID.PASSWORD)
   })
-
-  console.log(postData);
   
-  fetch("http://localhost:3333/user/create", {
-      method: "post",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      },
-      body: postData
-    })
-    .then(response => {
-      return response.text();
-    })
-    .then(data => {
-      console.log(data);
-    });
+  const result = yield userApi.signup('post','/user/signup',postData)
+
+  localStorage.setItem('authToken',result.token)  
+}
+
+export function* loginUserRequestSaga() {
+  const data = yield select(loginFormDataSelector);
+
+  const postData = JSON.stringify({
+    email : data.get(FIELD_ID.EMAIL),
+    password : data.get(FIELD_ID.PASSWORD)
+  })
+  
+  const result = yield userApi.signin('post','/user/signin',postData)
+
+  if (result.status === 'success' && result) {
+    localStorage.setItem('authToken',result.token)
+    window.location.replace('/chat')  
+  }else {
+    console.log('error');
+  }
 }
 
 
@@ -44,6 +51,19 @@ export function* registerFormChangeDataSaga({payload}) {
   }
 }
 
+export function* loginFormChangeDataSaga({payload}) {
+  const {fieldId} = payload;
+
+  switch (fieldId) {
+    case FIELD_ID.LOGIN_BTN:
+      yield loginUserRequestSaga()
+      break;
+    default:
+      break;
+  }
+}
+
 export default function* authSaga() {
   yield takeEvery(ACTIONS.REGISTER_FORM_DATA_CHANGE_ACTION, registerFormChangeDataSaga)
+  yield takeEvery(ACTIONS.LOGIN_FORM_DATA_CHANGE_ACTION, loginFormChangeDataSaga)
 }

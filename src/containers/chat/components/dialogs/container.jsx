@@ -20,7 +20,13 @@ export default class Dialogs extends Component {
         <SearchWrapper>
           <SearchInput placeholder="Поиск" />
         </SearchWrapper>
-        <DialogList dialogs={dialogs} setCurrentDialog={setCurrentDialog} />
+        {dialogs.list.length 
+        ? <DialogList 
+          dialogs={dialogs} 
+          setCurrentDialog={setCurrentDialog} 
+        />
+        : 'Списоск диалогов пуст'
+        }
       </Wrapper>
     )
   }
